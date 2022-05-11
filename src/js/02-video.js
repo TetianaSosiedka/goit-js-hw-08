@@ -1,10 +1,10 @@
 import throttle from 'lodash.throttle';
 import Player from '@vimeo/player';
 
-const player = new Player(refs.iframe);
 const refs = {
   iframe: document.querySelector('#vimeo-player'),
 };
+const player = new Player(refs.iframe);
 
 //getting and adding stop-time in local Storage
 const onTimeupdate = function ({ seconds }) {
