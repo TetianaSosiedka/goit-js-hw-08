@@ -2,8 +2,6 @@ import throttle from 'lodash.throttle';
 //---------------------------------------------------------------
 const refs = {
   form: document.querySelector('.feedback-form'),
-  formMail: document.querySelector('.feedback-form input'),
-  formMessage: document.querySelector('.feedback-form textarea'),
 };
 let formDates = {
   mail: '',
