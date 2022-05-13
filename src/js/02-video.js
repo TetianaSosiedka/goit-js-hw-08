@@ -7,11 +7,11 @@ const refs = {
 const player = new Player(refs.iframe);
 
 //getting and adding stop-time in local Storage
-const onTimeupdate = function ({ seconds }) {
+const onTimeUpate = function ({ seconds }) {
   localStorage.setItem('videoplayer-current-time', seconds);
 };
 
-player.on('timeupdate', throttle(onTimeupdate, 1000));
+player.on('timeupdate', throttle(onTimeUpate, 1000));
 
 //run since last view
 player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));

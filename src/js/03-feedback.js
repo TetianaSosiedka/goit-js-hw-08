@@ -18,6 +18,10 @@ function onFormSubmit(event) {
   event.currentTarget.reset();
   localStorage.removeItem('feedback-form-state');
   console.log('You entered:', formDates);
+  formDates = {
+    mail: '',
+    message: '',
+  };
 }
 function onFormInput(event) {
   if (event.target.nodeName === 'INPUT') {
