@@ -14,4 +14,15 @@ const onTimeUpate = function ({ seconds }) {
 player.on('timeupdate', throttle(onTimeUpate, 1000));
 
 //run since last view
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+player
+  .setCurrentTime(localStorage.getItem('videoplayer-current-time'))
+  .then()
+  .catch(function (error) {
+    switch (error.name) {
+      case 'RangeError':
+        break;
+
+      default:
+        break;
+    }
+  });
